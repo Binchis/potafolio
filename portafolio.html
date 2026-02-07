@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BINCHIS | Art Portfolio</title>
+    
+    <link rel="stylesheet" href="estilos.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">BINCHIS</div>
+        <div class="nav-links">
+            <a href="#inicio">INICIO</a>
+            <a href="#proyectos">PROYECTOS</a>
+            <a href="#contacto">CONTACTO</a>
+        </div>
+    </nav>
+
+    <section id="inicio" class="hero">
+        <div class="big-title" data-aos="fade-down">
+            <div>JUAN PABLO</div>
+            <div class="outline-text">RAMOS CARRILLO</div>
+        </div>
+
+        <div class="banner-wrapper" data-aos="zoom-in" data-aos-delay="200">
+            <img src="baner.png" alt="Banner Arte" class="main-img">
+            
+    </section>
+
+    <section class="about-section">
+        
+        <div class="about-text" data-aos="fade-right">
+            <p>Soy un artista visual impulsado por la necesidad de crear <span class="text-white">mundos e historias</span>.</p>
+            <p class="border-l">Mi trabajo explora desde el <span style="color:var(--accent-verde)">Pixel Art</span> hasta el modelado 3D complejo y la animación.</p>
+            <p>Busco atmósferas, tensión y personalidad en cada pixel.</p>
+        </div>
+
+        <div data-aos="fade-left">
+            <img src="idle.gif" style="width: 250px; image-rendering: pixelated; transform: scaleX(-1); filter: drop-shadow(0 0 20px var(--accent-morado));" alt="Binchis">
+        </div>
+
+    </section>
+
+    <section id="proyectos" class="projects-section">
+        <h2 class="section-header" data-aos="fade-up">GALERÍA</h2>
+        
+        <div class="project-grid">
+            
+            <a href="3d.html" class="project-card" data-aos="fade-up" data-aos-delay="0">
+                <span class="card-tag">01 / Autodesk Maya</span>
+                <div class="card-arrow">↗</div>
+                <div style="margin-top: auto;">
+                    <h3 class="card-title">3D & <br>Animación</h3>
+                    <p style="color:#888">Rigging, Modelado y Texturizado</p>
+                </div>
+            </a>
+
+            <a href="pixelart.html" class="project-card" data-aos="fade-up" data-aos-delay="100">
+                <span class="card-tag">02 / Aseprite</span>
+                <div class="card-arrow">↗</div>
+                <div style="margin-top: auto;">
+                    <h3 class="card-title">Pixel <br>Art</h3>
+                    <p style="color:#888">Sprites & Tilesets</p>
+                </div>
+            </a>
+
+            <a href="2d.html" class="project-card" data-aos="fade-up" data-aos-delay="200">
+                <span class="card-tag">03 / Tradicional</span>
+                <div class="card-arrow">↗</div>
+                <div style="margin-top: auto;">
+                    <h3 class="card-title">2D & <br>Dibujo</h3>
+                    <p style="color:#888">Ilustración Digital</p>
+                </div>
+            </a>
+
+        </div>
+    </section>
+
+    <footer id="contacto" data-aos="fade-up">
+        <p style="color: var(--accent-verde); font-family: monospace; margin-bottom: 1rem;">¿CREAMOS ALGO?</p>
+        <a href="mailto:binchisas@gmail.com" class="contact-email">binchisas@gmail.com</a>
+        
+        <div style="display: flex; justify-content: space-between; color: #666; font-size: 0.9rem;">
+            <span>MX +52 226 553 5493</span>
+            <span>© 2026 BINCHIS PORTFOLIO</span>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 1000, once: true });
+    </script>
+</body>
+</html>

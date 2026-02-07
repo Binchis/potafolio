@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BINCHIS | Pixel Art</title>
+    
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">BINCHIS</div>
+        <div class="nav-links">
+            <a href="portafolio.html">VOLVER AL INICIO</a>
+            <a href="3d.html">3D</a>
+            <a href="2d.html">2D</a>
+        </div>
+    </nav>
+
+    <article id="masketsouls" style="padding-bottom: 100px;">
+
+        <header class="hero" style="min-height: 60vh;">
+            <div style="position: absolute; inset: 0; z-index: -1;">
+                <img src="masketsouls/backgound.png" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.4; image-rendering: pixelated;">
+                <div style="position: absolute; inset: 0; background: linear-gradient(to top, var(--bg-color), transparent);"></div>
+            </div>
+            <div data-aos="zoom-in">
+                <img src="masketsouls/titulo.png" alt="Masketsouls Logo" style="max-width: 80%; height: auto; image-rendering: pixelated; filter: drop-shadow(0 0 20px var(--accent-morado));">
+            </div>
+            <p class="font-display" style="margin-top: 20px; color: var(--accent-verde); letter-spacing: 2px;">PROJECT ASSETS</p>
+        </header>
+
+        <div style="max-width: 1200px; margin: 0 auto; padding: 0 5%;">
+
+            <section style="margin-bottom: 80px;">
+                <h2 class="font-display" style="font-size: 2.5rem; margin-bottom: 30px; border-left: 5px solid var(--accent-morado); padding-left: 20px;" data-aos="fade-right">
+                    El Protagonista
+                </h2>
+                <p style="margin-bottom: 20px; font-size: 0.9rem; color: #666;">* Click en las tarjetas para ver la animación</p>
+                
+                <div class="sprites-grid">
+                    <div class="sprite-box" data-gif="masketsouls/idle.gif" data-aos="fade-up">
+                        <img src="masketsouls/idle.png" class="pixel-art">
+                        <span class="sprite-label">Idle Base</span>
+                    </div>
+                    <div class="sprite-box" data-gif="masketsouls/caminar.gif" data-aos="fade-up" data-aos-delay="100">
+                        <img src="masketsouls/caminar.png" class="pixel-art">
+                        <span class="sprite-label">Caminar</span>
+                    </div>
+                    <div class="sprite-box" data-gif="masketsouls/ataque.gif" data-aos="fade-up" data-aos-delay="200">
+                        <img src="masketsouls/ataque.png" class="pixel-art">
+                        <span class="sprite-label">Combo Básico</span>
+                    </div>
+                    <div class="sprite-box" data-gif="masketsouls/recibirdaño.gif" data-aos="fade-up" data-aos-delay="300">
+                        <img src="masketsouls/recibirdaño.png" class="pixel-art" style="filter: drop-shadow(0 0 5px red);">
+                        <span class="sprite-label">Daño / Hit</span>
+                    </div>
+                    <div class="sprite-box" data-gif="masketsouls/muertepj.gif" data-aos="fade-up" data-aos-delay="400">
+                        <img src="masketsouls/muertepj.png" class="pixel-art">
+                        <span class="sprite-label">Muerte</span>
+                    </div>
+                </div>
+            </section>
+
+            <section style="margin-bottom: 80px;">
+                <h2 class="font-display" style="font-size: 2.5rem; margin-bottom: 30px; border-left: 5px solid var(--accent-verde); padding-left: 20px;" data-aos="fade-right">
+                    Máscaras & Elementos
+                </h2>
+
+                <h3 class="element-title" style="color: #ff5500;">Elemento Fuego</h3>
+                <div class="pair-grid" data-aos="fade-up">
+                    <div class="sprite-box" data-gif="masketsouls/mascara%20fuego.gif">
+                        <img src="masketsouls/mascara%20fuego.png" class="pixel-art">
+                        <span class="sprite-label">Máscara Idle</span>
+                    </div>
+                    <div class="sprite-box" data-gif="masketsouls/ataque%20fuego.gif">
+                        <img src="masketsouls/ataque%20fuego.png" class="pixel-art">
+                        <span class="sprite-label">Ataque VFX</span>
+                    </div>
+                </div>
+
+                <h3 class="element-title" style="color: #00eeff;">Elemento Hielo</h3>
+                <div class="pair-grid" data-aos="fade-up">
+                    <div class="sprite-box" data-gif="masketsouls/mascara%20agua.gif"> 
+                        <img src="masketsouls/mascara%20agua.png" class="pixel-art">
+                        <span class="sprite-label">Máscara Idle</span>
+                    </div>
+                    <div class="sprite-box" data-gif="masketsouls/ataque%20hielo.gif">
+                        <img src="masketsouls/ataque%20hielo.png" class="pixel-art">
+                        <span class="sprite-label">Ataque VFX</span>
+                    </div>
+                </div>
+
+                 <h3 class="element-title" style="color: #ffdd00;">Elemento Rayo</h3>
+                 <div class="pair-grid" data-aos="fade-up">
+                     <div class="sprite-box" data-gif="masketsouls/mascara%20rayo.gif">
+                         <img src="masketsouls/mascara%20rayo.png" class="pixel-art">
+                         <span class="sprite-label">Máscara Idle</span>
+                     </div>
+                     <div class="sprite-box" data-gif="masketsouls/ataque%20rayo.gif">
+                         <img src="masketsouls/ataque%20rayo.png" class="pixel-art">
+                         <span class="sprite-label">Ataque VFX</span>
+                     </div>
+                 </div>
+
+                 <h3 class="element-title" style="color: #aa00ff;">Elemento Veneno</h3>
+                 <div class="pair-grid" data-aos="fade-up">
+                     <div class="sprite-box" data-gif="masketsouls/mascara%20veneno.gif">
+                         <img src="masketsouls/mascara%20veneno.png" class="pixel-art">
+                         <span class="sprite-label">Máscara Idle</span>
+                     </div>
+                     <div class="sprite-box" data-gif="masketsouls/veneno%20ataque.gif">
+                         <img src="masketsouls/veneno%20ataque.png" class="pixel-art">
+                         <span class="sprite-label">Ataque VFX</span>
+                     </div>
+                 </div>
+                 
+                 <h3 class="element-title" style="color: #ffffff;">Elemento Alma</h3>
+                 <div class="pair-grid" data-aos="fade-up">
+                     <div class="sprite-box" data-gif="masketsouls/mascara%20luz.gif">
+                         <img src="masketsouls/mascara%20luz.png" class="pixel-art">
+                         <span class="sprite-label">Máscara Idle</span>
+                     </div>
+                     <div class="sprite-box" data-gif="masketsouls/ataque%20alma.gif">
+                         <img src="masketsouls/ataque%20alma.png" class="pixel-art">
+                         <span class="sprite-label">Ataque VFX</span>
+                     </div>
+                 </div>
+            </section>
+
+            <section>
+                <h2 class="font-display" style="font-size: 2.5rem; margin-bottom: 30px; border-left: 5px solid red; padding-left: 20px;" data-aos="fade-right">
+                    Bestiario
+                </h2>
+
+                <div style="background: rgba(255,255,255,0.05); padding: 30px; border-radius: 20px; margin-bottom: 40px;" data-aos="fade-up">
+                    <h3 class="font-display" style="margin-bottom: 20px;">Enemigo 01: Golem Base</h3>
+                    <div class="sprites-grid">
+                        <div class="sprite-box" data-gif="masketsouls/idleenemy.gif">
+                            <img src="masketsouls/idleenemy.png" class="pixel-art">
+                            <span class="sprite-label">Idle</span>
+                        </div>
+                        <div class="sprite-box" data-gif="masketsouls/caminarenemy.gif">
+                            <img src="masketsouls/caminarenemy.png" class="pixel-art">
+                            <span class="sprite-label">Chase</span>
+                        </div>
+                        <div class="sprite-box" data-gif="masketsouls/atacarenemy.gif">
+                            <img src="masketsouls/atacarenemy.png" class="pixel-art">
+                            <span class="sprite-label">Attack</span>
+                        </div>
+                        <div class="sprite-box" data-gif="masketsouls/ataquenemigo.gif">
+                            <img src="masketsouls/ataquenemigo.png" class="pixel-art">
+                            <span class="sprite-label">Proyectil</span>
+                        </div>
+                        <div class="sprite-box" data-gif="masketsouls/recibirdañoenemigo.gif">
+                            <img src="masketsouls/recibirdañoenemigo.png" class="pixel-art">
+                            <span class="sprite-label">Hit</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="background: rgba(255,255,255,0.05); padding: 30px; border-radius: 20px;" data-aos="fade-up">
+                    <h3 class="font-display" style="margin-bottom: 20px; color: orange;">Enemigo 02: Sin Hilos</h3>
+                    <div class="sprites-grid">
+                        <div class="sprite-box" data-gif="masketsouls/idleenemigo2.gif">
+                            <img src="masketsouls/idleenemigo2.png" class="pixel-art">
+                            <span class="sprite-label">Idle</span>
+                        </div>
+                        <div class="sprite-box" data-gif="masketsouls/caminarenemigo2.gif">
+                            <img src="masketsouls/caminarenemigo2.png" class="pixel-art">
+                            <span class="sprite-label">Chase</span>
+                        </div>
+                        <div class="sprite-box" data-gif="masketsouls/ataqueenemigo2.gif">
+                            <img src="masketsouls/ataqueenemigo2.png" class="pixel-art">
+                            <span class="sprite-label">Attack</span>
+                        </div>
+                        <div class="sprite-box" data-gif="masketsouls/ataque%20enemigo2.gif">
+                            <img src="masketsouls/ataque%20enemigo2.png" class="pixel-art">
+                            <span class="sprite-label">Proyectil</span>
+                        </div>
+                         <div class="sprite-box" data-gif="masketsouls/muerteenemigo2.gif">
+                            <img src="masketsouls/muerteenemigo2.png" class="pixel-art">
+                            <span class="sprite-label">Death</span>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+        </div>
+    </article>
+
+    <div class="game-separator"></div>
+
+   <footer id="contacto" data-aos="fade-up">
+        <p style="color: var(--accent-verde); font-family: monospace; margin-bottom: 1rem;">¿CREAMOS ALGO?</p>
+        <a href="mailto:binchisas@gmail.com" class="contact-email">binchisas@gmail.com</a>
+        
+        <div style="display: flex; justify-content: space-between; color: #666; font-size: 0.9rem;">
+            <span>MX +52 226 553 5493</span>
+            <span>© 2026 BINCHIS PORTFOLIO</span>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 800, once: true });
+
+        // SCRIPT DE CLICK PARA ANIMAR (Igual que antes)
+        const cajas = document.querySelectorAll('.sprite-box[data-gif]');
+        cajas.forEach(caja => {
+            const img = caja.querySelector('img.pixel-art');
+            const rutaGif = caja.getAttribute('data-gif');
+            const rutaPng = img.src;
+            caja.addEventListener('click', () => {
+                if (caja.classList.contains('playing')) {
+                    img.src = rutaPng;
+                    caja.classList.remove('playing');
+                } else {
+                    img.src = rutaGif;
+                    caja.classList.add('playing');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

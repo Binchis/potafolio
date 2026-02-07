@@ -1,0 +1,434 @@
+/* --- 1. CONFIGURACIÓN GENERAL --- */
+:root {
+    --bg-color: #05030a;       /* Fondo casi negro */
+    --text-color: #ffffff;
+    --accent-morado: #6200ea;  /* Binchis Morado */
+    --accent-verde: #00ff88;   /* Binchis Verde */
+    --glass-bg: rgba(255, 255, 255, 0.03);
+    --glass-border: rgba(255, 255, 255, 0.1);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+}
+
+/* --- 2. TIPOGRAFÍA --- */
+h1, h2, h3, .logo {
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+a { text-decoration: none; color: inherit; transition: 0.3s; }
+
+/* --- 3. NAVEGACIÓN --- */
+.navbar {
+    position: fixed; top: 0; width: 100%;
+    padding: 1.5rem 3rem;
+    display: flex; justify-content: space-between; align-items: center;
+    z-index: 1000;
+    background: rgba(5,3,10,0.8); /* Fondo semi-transparente para que no se mezcle */
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--glass-border);
+}
+
+.logo { font-size: 1.5rem; letter-spacing: -1px; }
+.nav-links { display: flex; gap: 2rem; font-size: 0.8rem; letter-spacing: 2px; font-weight: bold; }
+.nav-links a:hover { color: var(--accent-verde); }
+
+/* --- 4. HERO SECTION (PORTADA) --- */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 120px 5% 0; /* 120px arriba para separar del menú */
+    position: relative;
+}
+
+/* Título Gigante */
+.big-title {
+    font-size: clamp(3rem, 13vw, 12rem);
+    line-height: 0.9;
+    z-index: 2;
+    text-align: center;
+    margin-bottom: 2rem; /* Espacio entre nombre y banner */
+}
+
+.outline-text {
+    -webkit-text-stroke: 1px rgba(255,255,255,0.5);
+    color: transparent;
+}
+
+/* El Banner */
+.banner-wrapper {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto; /* Centrado */
+    position: relative;
+    border-radius: 20px;
+    border: 1px solid var(--glass-border);
+    overflow: visible; /* Visible para que Binchis flote */
+    z-index: 1;
+}
+
+.banner-wrapper img.main-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 20px;
+    opacity: 0.8;
+    transition: transform 0.5s ease;
+}
+
+.banner-wrapper:hover img.main-img { transform: scale(1.02); opacity: 1; }
+
+/* Binchis Pixel Art Flotando en el Banner */
+.binchis-float {
+    position: absolute;
+    bottom: -20px;
+    right: 20px;
+    width: 120px;
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
+    transform: scaleX(-1);
+    filter: drop-shadow(0 0 10px var(--accent-morado));
+    z-index: 10;
+}
+
+/* --- 5. SECCIÓN SOBRE MÍ --- */
+.about-section {
+    padding: 8rem 5%;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Dos columnas iguales */
+    gap: 4rem;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-text p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #aaa;
+    margin-bottom: 2rem;
+}
+
+.text-white { color: white; font-weight: bold; }
+.border-l { border-left: 3px solid var(--accent-verde); padding-left: 1rem; }
+
+/* --- 6. PROYECTOS (GRID UNIFORME) --- */
+.projects-section { padding: 5rem 5%; max-width: 1400px; margin: 0 auto; }
+
+.section-header {
+    font-size: clamp(3rem, 10vw, 6rem);
+    margin-bottom: 3rem;
+    text-align: center;
+    border-bottom: 1px solid var(--glass-border);
+    padding-bottom: 1rem;
+}
+
+.project-grid {
+    display: grid;
+    /* Grid automático: se ajustan todas al mismo tamaño */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 2rem;
+}
+
+.project-card {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: 20px;
+    padding: 2.5rem;
+    min-height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+.project-card:hover {
+    border-color: var(--accent-verde);
+    transform: translateY(-10px); /* Animación al pasar mouse */
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.card-tag {
+    font-family: monospace;
+    color: var(--accent-verde);
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+.card-title {
+    font-size: 2.5rem;
+    line-height: 1;
+    margin-bottom: 0.5rem;
+}
+
+.card-arrow {
+    position: absolute;
+    top: 20px; right: 20px;
+    font-size: 1.5rem;
+    opacity: 0.5;
+    transition: 0.3s;
+}
+.project-card:hover .card-arrow { opacity: 1; transform: translate(5px, -5px); color: var(--accent-verde); }
+
+/* --- 7. FOOTER --- */
+footer {
+    padding: 5rem 5%;
+    border-top: 1px solid var(--glass-border);
+    margin-top: 5rem;
+    text-align: center;
+}
+
+.contact-email {
+    font-size: clamp(2rem, 6vw, 5rem);
+    font-family: 'Syne', sans-serif;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 2rem;
+}
+.contact-email:hover { color: var(--accent-morado); }
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .about-section { grid-template-columns: 1fr; text-align: center; }
+    .about-section img { margin: 0 auto; } /* Centrar GIF en cel */
+    .nav-links { display: none; }
+    .hero { padding-top: 100px; } /* Ajuste altura en cel */
+}
+
+/* --- ESTILOS ESPECÍFICOS PARA LA PÁGINA 3D --- */
+
+/* Contenedor de las tarjetas 3D */
+.card-3d {
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 16px;
+    padding: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.card-3d:hover {
+    border-color: var(--accent-verde);
+    transform: translateY(-5px);
+}
+
+/* Contenedor Multimedia (Video/Imagen/Modelo) */
+.media-container {
+    width: 100%;
+    /* Altura fija para que todas las cajas se vean uniformes */
+    height: 350px; 
+    background: #000;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Estilos para Imagen y Video */
+.media-content {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Recorta la imagen/video para llenar el cuadro sin deformar */
+}
+
+/* Estilos Específicos para el Visor de Modelos 3D */
+model-viewer {
+    width: 100%;
+    height: 100%;
+    background-color: #121212; /* Fondo oscuro para que resalte el modelo */
+    --poster-color: transparent;
+}
+
+/* Títulos y Texto dentro de las tarjetas */
+.project-info h3 {
+    font-family: 'Syne', sans-serif;
+    font-size: 1.8rem;
+    margin-bottom: 5px;
+    color: var(--text-color);
+}
+
+.project-info p {
+    color: #888;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    margin-bottom: 10px;
+}
+
+/* Etiquetas de Software (Maya, Blender, etc.) */
+.tech-stack {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.tech-tag {
+    font-size: 0.75rem;
+    padding: 4px 10px;
+    border-radius: 20px;
+    background: rgba(98, 0, 234, 0.2); /* Fondo moradito */
+    color: #ccc;
+    border: 1px solid rgba(98, 0, 234, 0.3);
+}
+
+/* --- ESTILOS EXTRA PARA MODELOS 3D --- */
+model-viewer {
+    width: 100%;
+    height: 100%;
+    background-color: #151515; /* Fondo gris oscuro elegante */
+    --poster-color: transparent;
+}
+
+   .sprite-box {
+            background: rgba(0, 0, 0, 0.4);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            transition: 0.3s;
+            min-height: 180px;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .sprite-box:hover {
+            border-color: var(--accent-verde);
+            background: rgba(0, 255, 136, 0.05);
+            transform: translateY(-5px);
+        }
+
+       
+        .sprite-box::after { content: '▶'; position: absolute; top: 10px; right: 10px; font-size: 12px; color: var(--accent-verde); opacity: 0; transition: 0.3s; }
+        .sprite-box:hover::after { opacity: 1; }
+        .sprite-box.playing { border-color: var(--accent-morado); background: rgba(98, 0, 234, 0.1); }
+        .sprite-box.playing::after { content: '❚❚'; color: var(--accent-morado); opacity: 1; }
+
+        .pixel-art {
+            image-rendering: pixelated;
+            width: 64px;
+            transform: scale(2.5);
+            margin-bottom: 15px;
+            pointer-events: none;
+        }
+
+        .sprite-label {
+            margin-top: 20px;
+            font-size: 0.8rem;
+            color: #888;
+            font-family: monospace;
+            text-transform: uppercase;
+            text-align: center;
+        }
+
+        /* Grid estándar */
+        .sprites-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        /* Grid más pequeño para pares (Máscara + Ataque) */
+        .pair-grid {
+             display: grid;
+             grid-template-columns: repeat(2, 1fr); /* Siempre 2 columnas */
+             gap: 15px;
+             max-width: 400px; /* Que no se estiren mucho */
+             margin-bottom: 40px;
+        }
+
+        .element-title {
+            font-family: 'Syne', sans-serif;
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            color: var(--white);
+        }
+
+        .game-separator { border-top: 1px dashed rgba(255,255,255,0.2); margin: 80px 0 40px; }
+
+
+        /* --- ESTILOS EXCLUSIVOS PARA 2D (MASONRY) --- */
+
+.masonry-gallery {
+    column-count: 3; /* 3 Columnas en PC */
+    column-gap: 20px;
+}
+
+.art-item {
+    break-inside: avoid; /* Evita que se partan las imágenes */
+    margin-bottom: 20px;
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+    background: #000;
+}
+
+.art-item:hover {
+    transform: scale(1.02);
+    border-color: var(--accent-verde);
+    z-index: 10;
+    box-shadow: 0 10px 30px rgba(0, 255, 136, 0.1);
+}
+
+.art-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: filter 0.3s;
+}
+
+/* Efecto opcional: un poco oscuros hasta que pasas el mouse */
+.art-item img:hover {
+    filter: brightness(1.1);
+}
+
+/* Etiqueta flotante con el nombre (opcional) */
+.art-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+    padding: 20px;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.art-item:hover .art-overlay { opacity: 1; }
+
+.art-title {
+    font-family: 'Syne', sans-serif;
+    font-size: 1rem;
+    color: white;
+    text-transform: uppercase;
+}
+
+/* RESPONSIVE PARA 2D */
+@media (max-width: 900px) {
+    .masonry-gallery { column-count: 2; }
+}
+@media (max-width: 600px) {
+    .masonry-gallery { column-count: 1; }
+}
+
+

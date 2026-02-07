@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BINCHIS | 3D Portfolio</title>
+    
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"></script>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">BINCHIS</div>
+        <div class="nav-links">
+            <a href="portafolio.html">INICIO</a>
+            <a href="pixelart.html">PIXEL ART</a>
+            <a href="2d.html">2D</a>
+        </div>
+    </nav>
+
+    <header class="hero" style="min-height: 50vh; justify-content: center; align-items: center; padding-top: 100px; text-align: center;">
+        <div style="position: absolute; inset: 0; z-index: -1;">
+            <div style="width: 100%; height: 100%; background: radial-gradient(circle at center, #1a1a2e 0%, #05030a 100%);"></div>
+        </div>
+
+        <div class="big-title" data-aos="fade-up">
+            <div class="outline-text" style="font-size: clamp(3rem, 8vw, 8rem);">MUNDOS</div>
+            <div style="color: var(--accent-verde); font-size: clamp(2rem, 9vw, 6rem); word-break: break-word;">
+                TRIDIMENSIONALES
+            </div>
+        </div>
+    </header>
+
+    <div style="max-width: 1400px; margin: 0 auto; padding: 0 5% 100px;">
+
+        <div class="project-grid">
+            
+            <article class="card-3d" data-aos="fade-up">
+                <div class="media-container">
+                    <model-viewer 
+                        src="3d/raolet.glb" 
+                        alt="Modelo 3D Raolet" 
+                        camera-controls 
+                        auto-rotate 
+                        shadow-intensity="1">
+                    </model-viewer>
+                </div>
+                <div class="project-info">
+                    <h3>Raolet</h3>
+                    <p>Nuevo modelo 3D optimizado e interactivo.</p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">GLB</span>
+                        <span class="tech-tag">Personaje</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="card-3d" data-aos="fade-up" data-aos-delay="100">
+                <div class="media-container">
+                    <model-viewer 
+                        src="3d/tilinasglb.glb" 
+                        alt="Modelo 3D Tilinas" 
+                        camera-controls 
+                        auto-rotate 
+                        shadow-intensity="1"
+                        camera-orbit="45deg 55deg 4m">
+                    </model-viewer>
+                </div>
+                <div class="project-info">
+                    <h3>Character: Tilinas</h3>
+                    <p>Modelo completo con topología limpia.</p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">GLB</span>
+                        <span class="tech-tag">Modelado</span>
+                    </div>
+                </div>
+            </article>
+
+          <article class="card-3d" data-aos="fade-up" data-aos-delay="100">
+                <div class="media-container">
+                    <video class="media-content"autoplay loop muted playsinline>
+                        <source src="3d/raolet.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="project-info">
+                    <h3>Animacion</h3>
+                    <p>Raolet sentadito en una hogera.</p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Rigging</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="card-3d" data-aos="fade-up"  data-aos-delay="200">
+                <div class="media-container">
+                    <video class="media-content" controls loop muted poster="3d/post.jpg">
+                        <source src="3d/aniamcion.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="project-info">
+                    <h3>Corto Animado</h3>
+                    <p>Proyecto final de animación y narrativa.</p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Animación</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="card-3d" data-aos="fade-up" data-aos-delay="100">
+                <div class="media-container">
+                    <video class="media-content"autoplay loop muted playsinline>
+                        <source src="3d/rig asuna.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="project-info">
+                    <h3>Rigging Avanzado</h3>
+                    <p>Setup de huesos y controles en Asuna.</p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Rigging</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="card-3d" data-aos="fade-up" data-aos-delay="200">
+                <div class="media-container">
+                    <video class="media-content" autoplay loop muted playsinline>
+                        <source src="3d/torsos.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="project-info">
+                    <h3>Estudio de Anatomía</h3>
+                    <p>Escultura digital de torsos en ZBrush.</p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">ZBrush</span>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+    </div>
+
+    <footer id="contacto" data-aos="fade-up">
+        <p style="color: var(--accent-verde); font-family: monospace; margin-bottom: 1rem;">¿CREAMOS ALGO?</p>
+        <a href="mailto:binchisas@gmail.com" class="contact-email">binchisas@gmail.com</a>
+        
+        <div style="display: flex; justify-content: space-between; color: #666; font-size: 0.9rem;">
+            <span>MX +52 226 553 5493</span>
+            <span>© 2026 BINCHIS PORTFOLIO</span>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 800, once: true });
+    </script>
+</body>
+</html>
