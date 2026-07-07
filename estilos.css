@@ -432,3 +432,52 @@ model-viewer {
 }
 
 
+.art-video, 
+.art-item video {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: inherit;
+}
+
+.lazy-video {
+    background: #000;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* No metas .art-item aquí porque rompe el masonry */
+.project-card,
+.card-3d,
+.sprite-box {
+    content-visibility: auto;
+    contain-intrinsic-size: 350px;
+}
+
+.masonry-gallery .art-item {
+    overflow: hidden;
+}
+
+.masonry-gallery .art-item video.art-video {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+    background: #000;
+    border-radius: inherit;
+}
+
+/* Responsive más cómodo */
+@media (max-width: 900px) {
+    .masonry-gallery {
+        column-count: 2;
+    }
+}
+
+@media (max-width: 430px) {
+    .masonry-gallery {
+        column-count: 1;
+    }
+}
